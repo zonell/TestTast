@@ -2,6 +2,7 @@ package com.example.testtask.di
 
 import androidx.room.Room
 import com.example.testtask.data.db.BootEventDB
+import com.example.testtask.data.db.BootEventDao
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -16,5 +17,5 @@ val dataBaseModule = module {
             "events_database.db"
         ).build()
     }
-    single { get<BootEventDB>().bootDao() }
+    single{ get<BootEventDB>().bootDao() }
 }
